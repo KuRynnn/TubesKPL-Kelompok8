@@ -1,17 +1,23 @@
-namespace TubesKPL_Kelompok8
+using TubesKPL_Kelompok8;
+using System.Security.Cryptography.X509Certificates;
+using TubesKPL_Kelompok8;
+
+internal class Program
 {
-    internal static class Program
+    private static void Main(string[] args)
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
-        }
+        BeliJasa bj = new BeliJasa();
+        List<Akun> kn = new List<Akun>();
+
+        kn.Add(new Akun("A", "adadsa"));
+        kn.Add(new Akun("rasyid", "depok"));
+        kn.Add(new Akun("bismillah", "sad"));
+
+        Akun akun = new Akun("dd", "wili");
+        kn.Add(akun);
+        bj.tambahDataPesanan(akun, kn);
+
+        bj.cekPemesanan(akun);
+
     }
 }
