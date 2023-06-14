@@ -146,7 +146,6 @@
             buttonEditProfil.TabIndex = 17;
             buttonEditProfil.Text = "Edit Profil";
             buttonEditProfil.UseVisualStyleBackColor = true;
-            buttonEditProfil.Click += buttonEditProfil_Click;
             // 
             // pictureBoxTampilkanJasa
             // 
@@ -167,7 +166,6 @@
             buttonTampilkanJasa.TabIndex = 16;
             buttonTampilkanJasa.Text = "Tampilkan Jasa";
             buttonTampilkanJasa.UseVisualStyleBackColor = true;
-            buttonTampilkanJasa.Click += buttonTampilkanJasa_Click;
             // 
             // pictureBoxEditProfil
             // 
@@ -188,7 +186,6 @@
             buttonCekPesanan.TabIndex = 15;
             buttonCekPesanan.Text = "Cek Pesanan";
             buttonCekPesanan.UseVisualStyleBackColor = true;
-            buttonCekPesanan.Click += buttonCekPesanan_Click;
             // 
             // buttonTambahJasa
             // 
@@ -259,7 +256,6 @@
             button3.TabIndex = 17;
             button3.Text = "Edit Profil";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
             // 
             // pictureBox3
             // 
@@ -280,7 +276,6 @@
             button4.TabIndex = 16;
             button4.Text = "Cek Pemesanan";
             button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
             // 
             // pictureBox5
             // 
@@ -301,7 +296,6 @@
             button6.TabIndex = 15;
             button6.Text = "Buat Pemesanan";
             button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
             // 
             // pictureBox4
             // 
@@ -322,7 +316,6 @@
             button7.TabIndex = 14;
             button7.Text = "Cari Jasa";
             button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
             // 
             // labelUser
             // 

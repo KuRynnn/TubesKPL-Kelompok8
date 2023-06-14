@@ -4,10 +4,8 @@ namespace TubesKPL_Kelompok8
 {
     public enum AkunState { Penjual, Pembeli, Logout }
     public enum Trigger { switchMode, keluar }
-
     public enum PilihanMenu
     {
-        //Enum untuk menu.
         TambahJasa, CekPesanan, TampilkanJasa,
         CariJasa, BuatPemesanan, CekPemesanan,
         EditProfile
@@ -96,9 +94,9 @@ namespace TubesKPL_Kelompok8
         {
             Form[] value =
                 {
-                    new dummy(this), new dummy(this),new dummy(this),
-                    new dummy(this), new dummy(this), new dummy(this),
-                    new dummy(this)
+                    new dummy(), new dummy(),new dummy(),
+                    new dummy(), new dummy(),new dummy(),
+                    new dummy()
                     //Disini bikin objek menu kalian sesuai enum.
                 };
             value[(int)posisi].Show();
@@ -118,48 +116,6 @@ namespace TubesKPL_Kelompok8
         private void buttonTambahJasa_Click(object sender, EventArgs e)
         {
             getMenus(PilihanMenu.TambahJasa);
-            this.Hide();
-        }
-
-        private void buttonCekPesanan_Click(object sender, EventArgs e)
-        {
-            getMenus(PilihanMenu.CekPesanan);
-            this.Hide();
-        }
-
-        private void buttonTampilkanJasa_Click(object sender, EventArgs e)
-        {
-            getMenus(PilihanMenu.TampilkanJasa);
-            this.Hide();
-        }
-
-        private void buttonEditProfil_Click(object sender, EventArgs e)
-        {
-            getMenus(PilihanMenu.EditProfile);
-            this.Hide();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            getMenus(PilihanMenu.CariJasa);
-            this.Hide();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            getMenus(PilihanMenu.BuatPemesanan);
-            this.Hide();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            getMenus(PilihanMenu.CekPemesanan);
-            this.Hide();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            getMenus(PilihanMenu.EditProfile);
             this.Hide();
         }
     }
