@@ -91,7 +91,6 @@
             label3.Size = new Size(17, 23);
             label3.TabIndex = 2;
             label3.Text = "-";
-            label3.Click += label3_Click;
             // 
             // button2
             // 
@@ -186,7 +185,6 @@
             label7.TabIndex = 11;
             label7.Text = "20000";
             label7.TextAlign = ContentAlignment.MiddleRight;
-            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -268,7 +266,6 @@
             label13.TabIndex = 19;
             label13.Text = "-";
             label13.TextAlign = ContentAlignment.MiddleRight;
-            label13.Click += label13_Click;
             // 
             // label14
             // 
@@ -328,7 +325,6 @@
             label17.TabIndex = 23;
             label17.Text = "-";
             label17.TextAlign = ContentAlignment.MiddleRight;
-            label17.Click += label17_Click;
             // 
             // label18
             // 
@@ -342,7 +338,6 @@
             label18.TabIndex = 24;
             label18.Text = "Rp";
             label18.TextAlign = ContentAlignment.MiddleRight;
-            label18.Click += label18_Click;
             // 
             // label19
             // 
@@ -367,7 +362,6 @@
             label20.TabIndex = 26;
             label20.Text = "-";
             label20.TextAlign = ContentAlignment.MiddleRight;
-            label20.Click += label20_Click;
             // 
             // label21
             // 
@@ -389,7 +383,6 @@
             label22.Size = new Size(351, 82);
             label22.TabIndex = 28;
             label22.Text = "-";
-            label22.Click += label22_Click;
             // 
             // Beli
             // 
@@ -427,7 +420,6 @@
             Name = "Beli";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Beli";
-            Load += Beli_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -438,7 +430,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Button button1;
         private Button button2;
         private Button button3;
         private PictureBox pictureBox1;

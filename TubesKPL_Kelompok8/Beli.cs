@@ -5,107 +5,86 @@ namespace TubesKPL_Kelompok8
 {
     public partial class Beli : Form
     {
-        public string judul { get; set; }
-        public string deskripsi { get; set; }
-        public int durasi { get; set; }
-        public int harga { get; set; }
-        public string status { get; set; }
+        public enum StatusPesanan
+        {
+            BelumBayar,
+            MenungguPembayaran,
+            SedangDiProses,
+            Selesai,
+            Dibatalkan
+        }
+
+        private Dictionary<StatusPesanan, string> statusMapping = new Dictionary<StatusPesanan, string>()
+        {
+            { StatusPesanan.BelumBayar, "Belum Bayar" },
+            { StatusPesanan.MenungguPembayaran, "Menunggu Pembayaran" },
+            { StatusPesanan.SedangDiProses, "Sedang Di Proses" },
+            { StatusPesanan.Selesai, "Selesai" },
+            { StatusPesanan.Dibatalkan, "Dibatalkan" }
+        };
+
+        public StatusPesanan Status { get; set; }
+        public string StatusText => statusMapping[Status];
+
+        public string Judul { get; set; }
+        public string Deskripsi { get; set; }
+        public int Durasi { get; set; }
+        public int Harga { get; set; }
+
         public Beli()
         {
             InitializeComponent();
-            this.judul = judul;
-            this.deskripsi = deskripsi;
-            this.durasi = durasi;
-            this.harga = harga;
-            this.status = status;
+            Judul = "Jasa Editor Video";
+            label3.Text = Judul;
+            Status = StatusPesanan.BelumBayar;
         }
 
-        private void Beli_Load(object sender, EventArgs e)
-        {
-            label3.Text = "Jasa Editor Video";
-            judul = label3.Text;
-        }
         private void button3_Click(object sender, EventArgs e)
+        {
+            if (IsDataValid())
+            {
+                Pembayaran pembayaranForm = new Pembayaran();
+                pembayaranForm.SetHalamanSebelumnya(this);
+                pembayaranForm.Show();
+                Hide();
+            }
+        }
+
+        private bool IsDataValid()
         {
             if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
             {
                 MessageBox.Show("Harap lengkapi semua data sebelum melanjutkan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Tidak melanjutkan jika ada field yang kosong
+                return false;
             }
 
-            Pembayaran BukaPembayaran = new Pembayaran();
-            BukaPembayaran.SetHalamanSebelumnya(this); // Menetapkan halaman sebelumnya ke form saat ini
-            BukaPembayaran.Show();
-            this.Hide();
+            return true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // Mendapatkan nilai input dari TextBox1
             if (int.TryParse(textBox1.Text, out int inputHarga))
             {
-                // Mengalikan jumlah dengan nilai awal harga (20000)
-                harga = inputHarga * 20000;
-
-                // Menampilkan hasil pada label7 dan label17
-                label7.Text = harga.ToString();
-                label17.Text = harga.ToString();
+                Harga = inputHarga * 20000;
+                label7.Text = Harga.ToString();
+                label17.Text = Harga.ToString();
             }
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            // Mendapatkan nilai input dari TextBox3
             if (int.TryParse(textBox3.Text, out int jumlahHari))
             {
-                // Menampilkan hasil jumlah hari pada label13 dan label20
-                durasi = jumlahHari;
-                label13.Text = durasi.ToString();
-                label20.Text = durasi.ToString();
+                Durasi = jumlahHari;
+                label13.Text = Durasi.ToString();
+                label20.Text = Durasi.ToString();
             }
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            // Menampilkan deskripsi
-            deskripsi = textBox2.Text;
-            label22.Text = deskripsi;
+            Deskripsi = textBox2.Text;
+            label22.Text = Deskripsi;
         }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

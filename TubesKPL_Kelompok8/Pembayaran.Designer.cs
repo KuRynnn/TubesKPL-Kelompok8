@@ -175,7 +175,6 @@ namespace TubesKPL_Kelompok8
             label20.TabIndex = 34;
             label20.Text = "-";
             label20.TextAlign = ContentAlignment.MiddleRight;
-            label20.Click += label20_Click;
             // 
             // label19
             // 
@@ -213,7 +212,6 @@ namespace TubesKPL_Kelompok8
             label17.TabIndex = 31;
             label17.Text = "-";
             label17.TextAlign = ContentAlignment.MiddleRight;
-            label17.Click += label17_Click;
             // 
             // label16
             // 
@@ -226,7 +224,6 @@ namespace TubesKPL_Kelompok8
             label16.TabIndex = 30;
             label16.Text = "-";
             label16.TextAlign = ContentAlignment.MiddleRight;
-            label16.Click += label16_Click;
             // 
             // label15
             // 
@@ -272,7 +269,6 @@ namespace TubesKPL_Kelompok8
             label3.TabIndex = 36;
             label3.Text = "-";
             label3.TextAlign = ContentAlignment.MiddleRight;
-            label3.Click += label3_Click;
             // 
             // label4
             // 

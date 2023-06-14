@@ -41,6 +41,7 @@
             button3 = new Button();
             button1 = new Button();
             label3 = new Label();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -55,6 +56,7 @@
             button2.Size = new Size(42, 29);
             button2.TabIndex = 6;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label1
             // 
@@ -85,9 +87,9 @@
             label16.ImageAlign = ContentAlignment.MiddleRight;
             label16.Location = new Point(21, 100);
             label16.Name = "label16";
-            label16.Size = new Size(176, 24);
+            label16.Size = new Size(17, 24);
             label16.TabIndex = 31;
-            label16.Text = "Jasa Editor Video";
+            label16.Text = "-";
             label16.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label18
@@ -96,7 +98,7 @@
             label18.BackColor = Color.DarkGray;
             label18.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label18.ImageAlign = ContentAlignment.MiddleRight;
-            label18.Location = new Point(245, 100);
+            label18.Location = new Point(242, 100);
             label18.Name = "label18";
             label18.Size = new Size(36, 24);
             label18.TabIndex = 34;
@@ -108,13 +110,12 @@
             label17.BackColor = Color.DarkGray;
             label17.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label17.ImageAlign = ContentAlignment.MiddleRight;
-            label17.Location = new Point(287, 106);
+            label17.Location = new Point(281, 100);
             label17.Name = "label17";
-            label17.Size = new Size(84, 18);
+            label17.Size = new Size(90, 24);
             label17.TabIndex = 33;
             label17.Text = "-";
             label17.TextAlign = ContentAlignment.MiddleRight;
-            label17.Click += label17_Click;
             // 
             // label2
             // 
@@ -140,7 +141,6 @@
             label20.TabIndex = 37;
             label20.Text = "-";
             label20.TextAlign = ContentAlignment.MiddleRight;
-            label20.Click += label20_Click;
             // 
             // label19
             // 
@@ -166,6 +166,7 @@
             button3.TabIndex = 38;
             button3.Text = "Pesanan Diterima";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button1
             // 
@@ -179,6 +180,7 @@
             button1.TabIndex = 39;
             button1.Text = "Batalkan Pesanan";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label3
             // 
@@ -186,17 +188,32 @@
             label3.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(21, 197);
             label3.Name = "label3";
-            label3.Size = new Size(131, 18);
+            label3.Size = new Size(194, 18);
             label3.TabIndex = 40;
             label3.Text = "-";
             label3.TextAlign = ContentAlignment.MiddleLeft;
-            label3.Click += label3_Click;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.LightSeaGreen;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(10, 268);
+            button5.Name = "button5";
+            button5.Size = new Size(374, 46);
+            button5.TabIndex = 41;
+            button5.Text = "Pesan Lagi";
+            button5.UseVisualStyleBackColor = false;
+            button5.Visible = false;
+            button5.Click += button5_Click;
             // 
             // Pesanan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(396, 849);
+            Controls.Add(button5);
             Controls.Add(label3);
             Controls.Add(button1);
             Controls.Add(button3);
@@ -210,6 +227,7 @@
             Controls.Add(button2);
             Controls.Add(label1);
             Name = "Pesanan";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Pesanan";
             Load += Pesanan_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -220,6 +238,7 @@
         #endregion
 
         private Button button2;
+        private Button button4;
         private Label label1;
         private PictureBox pictureBox1;
         private Label label16;
@@ -231,5 +250,6 @@
         private Button button3;
         private Button button1;
         private Label label3;
+        private Button button5;
     }
 }
