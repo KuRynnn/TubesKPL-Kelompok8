@@ -88,9 +88,10 @@
             label3.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(12, 112);
             label3.Name = "label3";
-            label3.Size = new Size(166, 23);
+            label3.Size = new Size(17, 23);
             label3.TabIndex = 2;
-            label3.Text = "Jasa Editor Video";
+            label3.Text = "-";
+            label3.Click += label3_Click;
             // 
             // button2
             // 
@@ -426,6 +427,7 @@
             Name = "Beli";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Beli";
+            Load += Beli_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

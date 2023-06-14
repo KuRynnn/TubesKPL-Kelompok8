@@ -16,5 +16,25 @@ namespace TubesKPL_Kelompok8
         {
             InitializeComponent();
         }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pesanan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
