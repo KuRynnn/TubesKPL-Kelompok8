@@ -39,7 +39,7 @@ namespace TubesKPL_Kelompok8
 
         public Akun cariAkun(List<Akun> lis, string cari_uname)
         {
-            Debug.Assert(cari_uname != null);
+            //Debug.Assert(cari_uname != null);
             Akun akun = new Akun("", ""); int i;
             while (akun.username != cari_uname)
             {
