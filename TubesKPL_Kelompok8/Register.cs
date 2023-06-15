@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TubesKPL_Kelompok8
 {
-    public partial class Form4 : Form
+    public partial class Register : Form
     {
-        public Form4()
+        public Register()
         {
             InitializeComponent();
         }
@@ -23,7 +23,10 @@ namespace TubesKPL_Kelompok8
             if (result == DialogResult.OK)
             {
                 UnggahJasaConfig config = new UnggahJasaConfig();
-                config.register(textBoxFullname.Text, textBoxUsername.Text, textBoxEmail.Text, textBoxPassword.Text);
+                config.Register(textBoxFullname.Text, textBoxUsername.Text, textBoxEmail.Text, textBoxPassword.Text);
+                Login form = new Login();
+                form.Show();
+                this.Hide();
             }
         }
     }

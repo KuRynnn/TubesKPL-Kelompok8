@@ -1,6 +1,6 @@
 ﻿namespace TubesKPL_Kelompok8
 {
-    partial class Form4
+    partial class Register
     {
         /// <summary>
         /// Required designer variable.
@@ -49,7 +49,7 @@
             btnRegister.Location = new Point(36, 340);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(326, 34);
+            btnRegister.Size = new Size(282, 34);
             btnRegister.TabIndex = 25;
             btnRegister.Text = "Daftar";
             btnRegister.UseVisualStyleBackColor = false;
@@ -59,7 +59,7 @@
             // 
             textBoxPassword.Location = new Point(36, 284);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(326, 23);
+            textBoxPassword.Size = new Size(282, 23);
             textBoxPassword.TabIndex = 24;
             // 
             // labelPassword
@@ -76,7 +76,7 @@
             // 
             textBoxEmail.Location = new Point(36, 225);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(326, 23);
+            textBoxEmail.Size = new Size(282, 23);
             textBoxEmail.TabIndex = 22;
             // 
             // labelEmail
@@ -93,7 +93,7 @@
             // 
             textBoxUsername.Location = new Point(36, 164);
             textBoxUsername.Name = "textBoxUsername";
-            textBoxUsername.Size = new Size(326, 23);
+            textBoxUsername.Size = new Size(282, 23);
             textBoxUsername.TabIndex = 20;
             // 
             // labelUsername
@@ -110,7 +110,7 @@
             // 
             textBoxFullname.Location = new Point(36, 103);
             textBoxFullname.Name = "textBoxFullname";
-            textBoxFullname.Size = new Size(326, 23);
+            textBoxFullname.Size = new Size(282, 23);
             textBoxFullname.TabIndex = 18;
             // 
             // labelFullname
@@ -130,7 +130,7 @@
             labelJudul.ForeColor = Color.White;
             labelJudul.Location = new Point(-9, -3);
             labelJudul.Name = "labelJudul";
-            labelJudul.Size = new Size(414, 55);
+            labelJudul.Size = new Size(356, 55);
             labelJudul.TabIndex = 16;
             labelJudul.Text = "Register";
             labelJudul.TextAlign = ContentAlignment.MiddleCenter;
@@ -139,7 +139,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(398, 857);
+            ClientSize = new Size(346, 637);
             Controls.Add(btnRegister);
             Controls.Add(textBoxPassword);
             Controls.Add(labelPassword);

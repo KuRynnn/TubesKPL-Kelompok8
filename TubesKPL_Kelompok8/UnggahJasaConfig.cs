@@ -11,15 +11,18 @@ namespace TubesKPL_Kelompok8
     {
         private const string filepath = @"login_convig.json";
         public Konfig listAkun;
+
         public UnggahJasaConfig() //rewrite
         {
             listAkun = ReadKonfigFile<Konfig>();
         }
+
         public U ReadKonfigFile<U>()
         {
             string hasilBaca = File.ReadAllText(filepath);
             return JsonSerializer.Deserialize<U>(hasilBaca);
         }
+
         public void WriteKonfigFile()
         {
             JsonSerializerOptions options = new JsonSerializerOptions()
@@ -30,7 +33,7 @@ namespace TubesKPL_Kelompok8
             File.WriteAllText(filepath, tulisan);
         }
 
-        public Jasa bikinDataJasa(string jenis, int harga, string deskripsi)
+        public Jasa BikinDataJasa(string jenis, int harga, string deskripsi)
         {
             Jasa data = new Jasa();
             data.jenis_jasa = jenis;
@@ -39,7 +42,7 @@ namespace TubesKPL_Kelompok8
             return data;
         }
 
-        public void tambahData(string username, string jenis, int harga, string desc) //rewrite 
+        public void TambahData(string username, string jenis, int harga, string desc) //rewrite 
         {
             Konfig obj = ReadKonfigFile<Konfig>();
             for (int i = 0; i < obj.akun.Count; i++)
@@ -47,7 +50,7 @@ namespace TubesKPL_Kelompok8
                 if (obj.akun[i].username == username)
                 {
                     Jasa dataJasa = new Jasa();
-                    dataJasa = bikinDataJasa(jenis, harga, desc);
+                    dataJasa = BikinDataJasa(jenis, harga, desc);
                     obj.akun[i].penjual.jasa.Add(dataJasa);
                 }
             }
@@ -55,7 +58,7 @@ namespace TubesKPL_Kelompok8
             WriteKonfigFile();
         }
 
-        public void hapusData(string username, string jenis)
+        public void HapusData(string username, string jenis)
         {
             Konfig obj = ReadKonfigFile<Konfig>();
             Jasa jasaTemu = new Jasa();
@@ -80,7 +83,7 @@ namespace TubesKPL_Kelompok8
             WriteKonfigFile();
         }
 
-        public void showData(Akun akun)
+        public void ShowData(Akun akun)
         {
             int i = 1;
             foreach (Jasa jasa in akun.penjual.jasa)
@@ -93,21 +96,21 @@ namespace TubesKPL_Kelompok8
                 i++;
             }
         }
-        public Akun searchAkun(string username)
+
+        public Akun SearchAkun(string username)
         {
             Konfig obj = ReadKonfigFile<Konfig>();
-            foreach (Akun obj2 in obj.akun)
+            foreach (Akun akun in obj.akun)
             {
-                if (obj2.username == username)
+                if (akun.username == username)
                 {
-                    return obj2;
+                    return akun;
                 }
             }
             return null;
         }
 
-        //Jeda
-        public void register(string fullname, string username, string email, string password)
+        public void Register(string fullname, string username, string email, string password)
         {
             Konfig obj = ReadKonfigFile<Konfig>();
             Akun akunBaru = new Akun(username, password);

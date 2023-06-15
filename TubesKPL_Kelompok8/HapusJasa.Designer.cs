@@ -1,6 +1,6 @@
 ﻿namespace TubesKPL_Kelompok8
 {
-    partial class Form2
+    partial class HapusJasa
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@
             // btnHapus
             // 
             btnHapus.Font = new Font("Arial", 9.5F, FontStyle.Bold, GraphicsUnit.Point);
-            btnHapus.Location = new Point(290, 601);
+            btnHapus.Location = new Point(245, 456);
             btnHapus.Name = "btnHapus";
             btnHapus.Size = new Size(75, 23);
             btnHapus.TabIndex = 27;
@@ -72,7 +72,7 @@
             labelDeskripsiData.Font = new Font("Arial", 9.5F, FontStyle.Bold, GraphicsUnit.Point);
             labelDeskripsiData.Location = new Point(28, 459);
             labelDeskripsiData.Name = "labelDeskripsiData";
-            labelDeskripsiData.Size = new Size(337, 83);
+            labelDeskripsiData.Size = new Size(211, 34);
             labelDeskripsiData.TabIndex = 26;
             // 
             // labelHargaData
@@ -128,7 +128,7 @@
             labelData.Font = new Font("Arial", 14F, FontStyle.Bold, GraphicsUnit.Point);
             labelData.Location = new Point(28, 316);
             labelData.Name = "labelData";
-            labelData.Size = new Size(337, 25);
+            labelData.Size = new Size(292, 25);
             labelData.TabIndex = 20;
             labelData.Text = "Data:";
             // 
@@ -138,7 +138,7 @@
             listView.Font = new Font("Arial", 9.5F, FontStyle.Bold, GraphicsUnit.Point);
             listView.Location = new Point(28, 111);
             listView.Name = "listView";
-            listView.Size = new Size(337, 181);
+            listView.Size = new Size(292, 181);
             listView.TabIndex = 19;
             listView.UseCompatibleStateImageBehavior = false;
             listView.View = View.Details;
@@ -164,7 +164,7 @@
             labelListJasa.Font = new Font("Arial", 14F, FontStyle.Bold, GraphicsUnit.Point);
             labelListJasa.Location = new Point(28, 83);
             labelListJasa.Name = "labelListJasa";
-            labelListJasa.Size = new Size(337, 25);
+            labelListJasa.Size = new Size(184, 25);
             labelListJasa.TabIndex = 18;
             labelListJasa.Text = "List Jasa Akun:";
             // 
@@ -184,7 +184,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(398, 857);
+            ClientSize = new Size(346, 502);
             Controls.Add(buttonBack);
             Controls.Add(btnHapus);
             Controls.Add(labelDeskripsiData);
@@ -201,7 +201,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
             FormClosed += Form2_FormClosed;
-            Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
         }

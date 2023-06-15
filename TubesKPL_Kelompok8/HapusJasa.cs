@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.Pkcs;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,18 +12,32 @@ using static System.Windows.Forms.DataFormats;
 
 namespace TubesKPL_Kelompok8
 {
-    public partial class Form2 : Form
+    public sealed partial class HapusJasa : Form
     {
-        public Form2()
+        private string receivedText;
+        private static HapusJasa _instance;
+
+        private HapusJasa(string textFromForm3)
         {
             InitializeComponent();
+            receivedText = textFromForm3;
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        public static HapusJasa GetInstance(string recievedText)
         {
+            if (_instance == null)
+            {
+                _instance = new HapusJasa(recievedText);
+            }
+            return _instance;
+        }
+
+        public void reload()
+        {
+            listView.Items.Clear();
             UnggahJasaConfig config = new UnggahJasaConfig();
             Akun akun = new Akun();
-            akun = config.searchAkun("Admin");
+            akun = config.SearchAkun(receivedText);
             foreach (Jasa jasa in akun.penjual.jasa)
             {
                 ListViewItem item = new ListViewItem(jasa.jenis_jasa);
@@ -57,7 +72,7 @@ namespace TubesKPL_Kelompok8
                 UnggahJasaConfig config = new UnggahJasaConfig();
                 ListViewItem selectedItem = listView.SelectedItems[0];
                 string selectedDataJenis = selectedItem.Text;
-                config.hapusData("Admin", selectedDataJenis);
+                config.HapusData(receivedText, selectedDataJenis);
                 if (listView.Items.Count > 0)
                     listView.Items.Remove(listView.SelectedItems[0]);
             }
@@ -65,8 +80,7 @@ namespace TubesKPL_Kelompok8
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            form3.Show();
+            Form3.GetInstance(receivedText).Show();
             this.Hide();
         }
 

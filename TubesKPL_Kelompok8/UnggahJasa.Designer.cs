@@ -1,6 +1,6 @@
 ﻿namespace TubesKPL_Kelompok8
 {
-    partial class Form1
+    partial class UnggahJasa
     {
         /// <summary>
         ///  Required designer variable.
@@ -43,9 +43,10 @@
             // buttonBack
             // 
             buttonBack.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonBack.Location = new Point(12, 12);
+            buttonBack.Location = new Point(22, 26);
+            buttonBack.Margin = new Padding(6, 6, 6, 6);
             buttonBack.Name = "buttonBack";
-            buttonBack.Size = new Size(75, 23);
+            buttonBack.Size = new Size(139, 49);
             buttonBack.TabIndex = 25;
             buttonBack.Text = "Back";
             buttonBack.UseVisualStyleBackColor = true;
@@ -57,10 +58,10 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(32, 322);
-            button3.Margin = new Padding(3, 2, 3, 2);
+            button3.Location = new Point(22, 668);
+            button3.Margin = new Padding(6, 4, 6, 4);
             button3.Name = "button3";
-            button3.Size = new Size(326, 34);
+            button3.Size = new Size(605, 73);
             button3.TabIndex = 24;
             button3.Text = "Konfirmasi";
             button3.UseVisualStyleBackColor = false;
@@ -68,9 +69,10 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(32, 195);
+            richTextBox1.Location = new Point(59, 416);
+            richTextBox1.Margin = new Padding(6, 6, 6, 6);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(326, 87);
+            richTextBox1.Size = new Size(557, 181);
             richTextBox1.TabIndex = 23;
             richTextBox1.Text = "";
             // 
@@ -78,43 +80,48 @@
             // 
             labelDescription.AutoSize = true;
             labelDescription.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelDescription.Location = new Point(32, 177);
+            labelDescription.Location = new Point(59, 378);
+            labelDescription.Margin = new Padding(6, 0, 6, 0);
             labelDescription.Name = "labelDescription";
-            labelDescription.Size = new Size(111, 15);
+            labelDescription.Size = new Size(227, 29);
             labelDescription.TabIndex = 22;
             labelDescription.Text = "Enter Description: ";
             // 
             // textBoxPrice
             // 
-            textBoxPrice.Location = new Point(153, 138);
+            textBoxPrice.Location = new Point(284, 294);
+            textBoxPrice.Margin = new Padding(6, 6, 6, 6);
             textBoxPrice.Name = "textBoxPrice";
-            textBoxPrice.Size = new Size(205, 23);
+            textBoxPrice.Size = new Size(333, 39);
             textBoxPrice.TabIndex = 21;
             // 
             // labelPrice
             // 
             labelPrice.AutoSize = true;
             labelPrice.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelPrice.Location = new Point(32, 141);
+            labelPrice.Location = new Point(59, 301);
+            labelPrice.Margin = new Padding(6, 0, 6, 0);
             labelPrice.Name = "labelPrice";
-            labelPrice.Size = new Size(76, 15);
+            labelPrice.Size = new Size(153, 29);
             labelPrice.TabIndex = 20;
             labelPrice.Text = "Enter Price: ";
             // 
             // textBoxServiceName
             // 
-            textBoxServiceName.Location = new Point(153, 102);
+            textBoxServiceName.Location = new Point(284, 218);
+            textBoxServiceName.Margin = new Padding(6, 6, 6, 6);
             textBoxServiceName.Name = "textBoxServiceName";
-            textBoxServiceName.Size = new Size(205, 23);
+            textBoxServiceName.Size = new Size(333, 39);
             textBoxServiceName.TabIndex = 19;
             // 
             // labelServiceName
             // 
             labelServiceName.AutoSize = true;
             labelServiceName.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelServiceName.Location = new Point(32, 105);
+            labelServiceName.Location = new Point(59, 224);
+            labelServiceName.Margin = new Padding(6, 0, 6, 0);
             labelServiceName.Name = "labelServiceName";
-            labelServiceName.Size = new Size(125, 15);
+            labelServiceName.Size = new Size(250, 29);
             labelServiceName.TabIndex = 18;
             labelServiceName.Text = "Enter Service Name: ";
             // 
@@ -123,9 +130,10 @@
             labelJudul.BackColor = Color.LightSeaGreen;
             labelJudul.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             labelJudul.ForeColor = Color.White;
-            labelJudul.Location = new Point(-9, -3);
+            labelJudul.Location = new Point(-17, -6);
+            labelJudul.Margin = new Padding(6, 0, 6, 0);
             labelJudul.Name = "labelJudul";
-            labelJudul.Size = new Size(414, 55);
+            labelJudul.Size = new Size(769, 117);
             labelJudul.TabIndex = 17;
             labelJudul.Text = "Unggah Jasa";
             labelJudul.TextAlign = ContentAlignment.MiddleCenter;
@@ -133,16 +141,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(157, 12);
+            label1.Location = new Point(292, 26);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(0, 15);
+            label1.Size = new Size(0, 32);
             label1.TabIndex = 16;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(398, 857);
+            ClientSize = new Size(643, 1359);
             Controls.Add(buttonBack);
             Controls.Add(button3);
             Controls.Add(richTextBox1);
@@ -153,10 +162,12 @@
             Controls.Add(labelServiceName);
             Controls.Add(labelJudul);
             Controls.Add(label1);
+            Margin = new Padding(6, 6, 6, 6);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             FormClosed += Form1_FormClosed;
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

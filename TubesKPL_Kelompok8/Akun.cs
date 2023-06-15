@@ -50,7 +50,7 @@ public class Penjual
 public class Pesanan
 {
     public string nama_pesanan { get; set; }
-    public string akun_penyedxia { get; set; }
+    public string akun_penyedia { get; set; }
     public string jenis_jasa { get; set; }
     public string deskripsi_pesanan { get; set; }
     public string status_pesanan { get; set; }
